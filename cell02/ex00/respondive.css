@@ -1,0 +1,25 @@
+body{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+}
+table {
+    width: 100vw;
+    height: 100vh;
+    text-align: left;
+    border-collapse: collapse;
+}
+td {
+    width: 100%;
+    border: 1px solid;
+}
+#first{
+    background-color: yellowgreen;
+    width: 50%;
+    margin: 0%;
+}
+#second{
+    background-color: tomato;
+    width: 50%;
+    margin: 0%;
+}

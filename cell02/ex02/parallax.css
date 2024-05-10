@@ -1,0 +1,39 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.img1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-image: url(https://m.media-amazon.com/images/S/pv-target-images/49adda564798b7f897077f58b2a9b11e90ca71dc16326b33419902a62054bc2d.jpg);
+    height: 700px;
+    color: black;
+    font-size: 40px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.black {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    font-size: 40px;
+}
+
+.img2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://pbs.twimg.com/media/DJuSTjUXoAA8Ey4.jpg);
+    height: 700px;
+    font-size: 40px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+

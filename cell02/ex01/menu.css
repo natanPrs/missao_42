@@ -1,0 +1,33 @@
+.mainmenubtn {
+  background-color: grey;
+  color: white;
+  border: none;
+  padding:20px;
+  border-radius: 5%;
+}
+.mainmenubtn:hover {
+  background-color: cadetblue;
+  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-child {
+  border-radius: 5%;
+  display: none;
+  background-color: grey;
+  min-width: 150px;
+}
+.dropdown-child a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-child {
+  display: block;
+}
+
+.dropdown-child a:hover {
+  background-color: cadetblue;
+}

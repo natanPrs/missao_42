@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(133, 133, 133);
+}
+
+.img {
+    margin: 9px;
+    display: block;
+    height: 300px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://blog.enterprisedna.co/wp-content/uploads/2023/06/jase888_a_photo_of_a_panda_bear_programming_on_a_computer_moder_d6cde95e-4b74-40ed-be3b-98a3964a2537.png);
+
+}
+
+.socialMedia {
+    margin: 1px;
+    padding: 0px;
+    justify-content: center;
+    display: flex;
+    height: 70px;
+}
+
+.card {
+    
+    border-radius: 5px;
+    background-color: rgb(133, 133, 133);
+    height: 650px;
+    width: 485px;
+    
+   
+}
+.title {
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    background-color: rgb(59, 59, 59);
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    margin: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    font-size: 20px;
+    color: white;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgb(59, 59, 59);
+    display: flex;
+    justify-content: center;
+}
+
+.contact a {
+    color: inherit;
+}
+
+.contact a:link {
+    color: white;
+    text-decoration: none;  
+}
