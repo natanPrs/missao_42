@@ -1,0 +1,216 @@
+body {
+  font-style: italic;
+    margin: 0%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigImg {
+    background-attachment: fixed;
+    display: flex;
+    background-image: url(./imgs/space-monochrome-stars-galaxy-2216958-wallhere.com.jpg);
+    height: 1070px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.panda {
+    font-size: 90px;
+    color: white;
+    position: relative;
+    top: 340px; left: 700px;
+    
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh; /* Define a altura da barra lateral para ocupar toda a altura da janela visível */
+  background-color: #252323;
+  color: #fff;
+  padding: 20px;
+  overflow-y: auto; /* Adiciona rolagem vertical se a altura do conteúdo for maior do que a altura da barra lateral */
+}
+
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-bottom: 10px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.profilePhoto {
+    display: flex;
+    position: relative;
+    top: 40px; left: -70px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 50px rgb(0, 0, 0);
+    background-image: url(https://miro.medium.com/v2/resize:fit:1400/0*uPrVQazL1U4woEO9.png);
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+}
+
+.secondPart {
+    background-color: rgb(255, 255, 255);
+    height: 700px;
+}
+
+.tirdPart{
+    background-color: rgb(216, 216, 216);
+    height: 270px;
+}
+
+.ben10 {
+    position: relative;
+    top: 230px; left: 70px;
+    color: white;
+    text-decoration: none;
+}
+
+
+  .secondPart {
+    position: relative;
+    left: 400px;
+  }
+
+  .titleAbout {
+    position: relative;
+    color: rgb(36, 36, 36);
+    left: 80px ;
+    top: 60px;
+    margin-top: 5px;
+  }
+
+  .soldWorld {
+    position: relative;
+    color: rgb(0, 0, 0);
+    left: 80px ;
+    top: 60px;
+    margin-top: 90px;
+  }
+
+  .titleAbout::after {
+    position: relative;
+    top: 55px;
+    left: -110px;
+    content: ' ━━━━';
+    font-size: 25px;
+    color: rgb(36, 36, 36);
+  }
+
+  .imgAbout {
+    background-image: url(https://images.datacamp.com/image/upload/v1689325496/datarhys_an_absurdist_oil_painting_of_an_artificially_intellige_a23fb2c4_c77f_4552_b348_460455ee31aa_d94c99ad7a.png);
+    display: flex;
+    position: relative;
+    top: 70px; left: 80px;
+    box-shadow: 0px 0px 30px rgb(151, 151, 151);
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+  }
+
+  .nameAbout {
+    position: relative;
+    left: 450px; top: -280px;
+  }
+
+  .snuff {
+    position: relative;
+    left: 450px; top: -280px;
+  }
+
+  .lists {
+    display: flex;
+  }
+
+  .left {
+    position: relative;
+    left: 410px; top: -250px;
+    line-height: 60px;
+    list-style: none;
+  }
+
+  .rigth {
+    position: relative;
+    left: 500px; top: -250px;
+    line-height: 60px;
+    list-style: none;
+
+  }
+
+  .titleSkills {
+    position: relative;
+    left: 500px; 
+    color: rgb(36, 36, 36);
+    top: 60px;
+    margin-top: 5px;
+    
+  }
+
+  .snuffSkills {
+    position: relative;
+    top: 130px;
+    left: 500px;
+  }
+
+  .titleSkills::after {
+    position: relative;
+    top: 55px;
+    left: -110px;
+    content: ' ━━━━';
+    font-size: 25px;
+    color: rgb(36, 36, 36);
+  }
+
+
+
+  .lefttird {
+    position: relative;
+    left: 1115px; top: -235px;
+    line-height: 40px;
+    list-style: none;
+  }
+
+
+  .email {
+    text-decoration: none;
+    position: relative;
+    left: 500px;
+    top: -82px;
+  }
+
+  .contact {
+    position: relative;
+    left: 500px; 
+    color: rgb(36, 36, 36);
+    top: -150px;
+    margin-top: 1px;
+  }
+
+  .contact::after {
+    position: relative;
+    top: 55px;
+    left: -145px;
+    content: ' ━━━━';
+    font-size: 25px;
+    color: rgb(36, 36, 36);
+  }
+
