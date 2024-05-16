@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+            body {
+        display: flex;
+        justify-content: center;
+        overflow:hidden;
+    }
+
+    #ballon {
+        display: flex;
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+        margin: 38vh 0px;
+        background-color: rgb(250, 0,0);
+    }
+            
+    </style>
+</head>
+<body>
+    <div onmouseleave="leaveBallon()"id="ballon"></div>
+    <script>
+        const circle = document.getElementById('ballon');
+const initialSize = 200; 
+let currentSize = initialSize;
+
+circle.addEventListener('click', function() {
+  if (currentSize < 420) {
+    currentSize += 10;
+    ballon.style.width = `${currentSize}px`; 
+    ballon.style.height = `${currentSize}px`;
+  } else {
+    currentSize = initialSize;
+    ballon.style.width = `${initialSize}px`;
+    ballon.style.height = `${initialSize}px`;
+  }
+  if(ballon.style.backgroundColor == "rgb(255, 0, 0)"){
+    ballon.style.backgroundColor = "rgb(0, 255, 0)";
+ } else if (ballon.style.backgroundColor == "rgb(0, 255, 0)"){ 
+     ballon.style.backgroundColor = "rgb(0, 0, 255)";
+ }else { 
+     ballon.style.backgroundColor = "rgb(255, 0, 0)";
+ } 
+});
+
+function leaveBallon(){
+    if (currentSize > 200){
+        currentSize -= 5;
+        ballon.style.width = `${currentSize}px`
+        ballon.style.height = `${currentSize}px`
+    }
+    if(ballon.style.backgroundColor == "rgb(0, 0, 250)"){
+   ballon.style.backgroundColor = "rgb(0, 250, 0)";
+} else if (ballon.style.backgroundColor == "rgb(0, 250, 0)"){ 
+    ballon.style.backgroundColor = "rgb(250, 0, 0)";
+}else { 
+    ballon.style.backgroundColor = "rgb(0, 0, 250)";
+}
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+</head>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <form id="calculadoraForm">
+        <div>
+            <input type="text" id="numero1"> 
+            <select name="operacao" id="operacao">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="numero2"> 
+        </div>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('calculadoraForm');
+            const input1 = document.getElementById('numero1');
+            const input2 = document.getElementById('numero2');
+            const select = document.getElementById('operacao');
+
+            form.addEventListener('submit', function(evento) {
+                evento.preventDefault(); // Evita o envio do formulário
+
+                const num1 = parseFloat(input1.value);
+                const num2 = parseFloat(input2.value);
+                let resultadoCalculado;
+
+                switch (select.value) {
+                    case '+':
+                        resultadoCalculado = num1 + num2;
+                        break;
+                    case '-':
+                        resultadoCalculado = num1 - num2;
+                        break;
+                    case '*':
+                        resultadoCalculado = num1 * num2;
+                        break;
+                    case '/':
+                        resultadoCalculado = num1 / num2;
+                        break;
+                    case '%':
+                        resultadoCalculado = num1 % num2;
+                        break;
+                    
+                    default:
+                        resultadoCalculado = 'Operação inválida';
+                }
+
+                if ( num1 < 0 || num2 < 0 || (isNaN(resultadoCalculado)) ) {
+                    resultadoCalculado = "Error :("
+                }
+
+                if ( select.value === '/' && num2 === 0 ) {
+                    resultadoCalculado = "It's over 9000!"
+                }
+                if ( select.value === '%' && num2 === 0 ) {
+                    resultadoCalculado = "It's over 9000!"
+                }
+
+                // Exibe o resultado em um alerta e no console
+                window.alert(`Resultado: ${resultadoCalculado}`);
+                console.log(`${resultadoCalculado}`)
+
+                // Exibe um alerta "Please, use me..." a cada 30 segundos
+            setInterval(function() {
+                window.alert('Please, use me...');
+            }, 30000); // 30000 milissegundos = 30 segundos
+
+            });
+        });
+    </script>
+</body>
+</html>

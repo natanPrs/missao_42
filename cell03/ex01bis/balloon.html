@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable Ballon</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30vh;
+        }
+        #ballon {
+            
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 0, 0);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="ballon"></div>
+
+    <script>
+        $(document).ready(function() {
+            const $ballon = $('#ballon');
+            let currentSize = 200;
+
+            $ballon.click(function() {
+                if (currentSize < 420) {
+                    currentSize += 10;
+                    $ballon.css({
+                        width: currentSize + 'px',
+                        height: currentSize + 'px'
+                    });
+                } else {
+                    currentSize = 200;
+                    $ballon.css({
+                        width: currentSize + 'px',
+                        height: currentSize + 'px'
+                    });
+                }
+                if ($ballon.css('background-color') == "rgb(255, 0, 0)") {
+                    $ballon.css('background-color', "rgb(0, 255, 0)");
+                } else if ($ballon.css('background-color') == "rgb(0, 255, 0)") {
+                    $ballon.css('background-color', "rgb(0, 0, 255)");
+                } else {
+                    $ballon.css('background-color', "rgb(255, 0, 0)");
+                }
+            });
+
+            $ballon.mouseleave(function() {
+                if (currentSize > 200) {
+                    currentSize -= 5;
+                    $ballon.css({
+                        width: currentSize + 'px',
+                        height: currentSize + 'px'
+                    });
+                }
+                if ($ballon.css('background-color') == "rgb(0, 0, 255)") {
+                    $ballon.css('background-color', "rgb(0, 255, 0)");
+                } else if ($ballon.css('background-color') == "rgb(0, 255, 0)") {
+                    $ballon.css('background-color', "rgb(255, 0, 0)");
+                } else {
+                    $ballon.css('background-color', "rgb(0, 0, 255)");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

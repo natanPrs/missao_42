@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        select{
+            width: 50px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <form id="myForm" action="" method="get">
+        <input type="text" name="" id="left">
+            <select name="" id="operators">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+        <input type="text" name="" id="right">
+        <input type="submit" value="Try me!">
+    </form>
+    <script>
+        $( document ).ready(function() {
+
+        $("#myForm").on("submit", function(evento){
+        evento.preventDefault(evento); 
+
+            var leftNum = $("#left").val();
+            var rightNum = $("#right").val();
+            var selectOperators = $("#operators").val();
+
+            var leftNumValue = parseInt(leftNum);
+            var rightNumValue = parseInt(rightNum);
+            var myForm = $("#myForm");
+
+
+            switch (selectOperators) {
+                    case '+':
+                        resultadoCalculado = leftNumValue + rightNumValue;
+                        break;
+                    case '-':
+                        resultadoCalculado = leftNumValue - rightNumValue;
+                        break;
+                    case '*':
+                        resultadoCalculado = leftNumValue * rightNumValue;
+                        break;
+                    case '/':
+                        resultadoCalculado = leftNumValue / rightNumValue;
+                        break;
+                    case '%':
+                        resultadoCalculado = leftNumValue % rightNumValue;
+                        break;
+                    default:
+                        resultadoCalculado = 'Operação inválida';
+                }
+
+                if ( leftNumValue < 0 || rightNumValue < 0 || isNaN(leftNumValue) || isNaN(rightNumValue)) {
+                    resultadoCalculado = "Error :("
+                }
+
+                if ( selectOperators === '/' && rightNumValue === 0 ) {
+                    resultadoCalculado = "It's over 9000!"
+                }
+                if ( selectOperators === '%' && rightNumValue === 0 ) {
+                    resultadoCalculado = "It's over 9000!"
+                }
+                if ( selectOperators === '/' && leftNumValue === 0 ) {
+                    resultadoCalculado = "It's over 9000!"
+                }
+                if ( selectOperators === '%' && leftNumValue === 0 ) {
+                    resultadoCalculado = "It's over 9000!"
+                }
+
+                
+                window.alert(`${resultadoCalculado}`);
+                console.log(`${resultadoCalculado}`)    
+                
+                setInterval(function() {
+                window.alert('Please, use me...');
+            }, 30000); // 30000 milissegundos = 30 segundos
+
+        })
+
+
+    })
+   
+
+    </script>
+</body>
+</html>
